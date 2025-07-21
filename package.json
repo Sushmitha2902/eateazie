@@ -4,7 +4,12 @@
   "description": "food restaurant.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "NODE_ENV=development tsx server/index.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "db:push": "drizzle-kit push:pg",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:migrate": "drizzle-kit migrate"
   },
   "repository": {
     "type": "git",
@@ -82,6 +87,7 @@
     "next-themes": "^0.4.6",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
+    "pg": "^8.16.3",
     "react": "^19.1.0",
     "react-day-picker": "^9.8.0",
     "react-dom": "^19.1.0",
@@ -96,14 +102,5 @@
     "wouter": "^3.7.1",
     "ws": "^8.18.3",
     "zod": "^3.25.76"
-  },
-    "scripts": {
-    "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "vite build",
-    "preview": "vite preview",
-    "db:push": "drizzle-kit push:pg",
-    "db:generate": "drizzle-kit generate:pg",
-    "db:migrate": "drizzle-kit migrate"
   }
-
 }
